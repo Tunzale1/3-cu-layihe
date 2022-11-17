@@ -11,15 +11,11 @@ const input8 = document.querySelector(".input8");//sag-gbp
 const fromAmount = document.querySelector(".inpt1");
 const toAmount = document.querySelector(".inpt2");
 
-
-
-
 // rubldan cevirmey/////////////////////////////////
 
 input1.addEventListener("click",newData1)
 fromAmount.addEventListener('click',newData1)
 toAmount.addEventListener('click',newData1)
-
 
     function newData1 () {
         
@@ -31,50 +27,30 @@ toAmount.addEventListener('click',newData1)
             fetch(`https://api.exchangerate.host/latest?base=RUB&symbols=USD`)
             .then(res => res.json())
             .then(data => {toAmount.value = ((newArea*data.rates['USD']))})
-            
-             
-         }
-         input7.addEventListener("click",rubtoeur)
-
-         function rubtoeur() {
-            
-            let newArea = fromAmount.value
-        
-            fetch(`https://api.exchangerate.host/latest?base=RUB&symbols=EUR`)
+              }
+       input7.addEventListener("click",rubtoeur)
+function rubtoeur() {
+             let newArea = fromAmount.value
+         fetch(`https://api.exchangerate.host/latest?base=RUB&symbols=EUR`)
             .then(res => res.json())
             .then(data => {toAmount.value = ((newArea*data.rates['EUR']))})
-            
-             
-         }
+             }
 
-         input8.addEventListener("click",rubtogbp)
-
-         function rubtogbp() {
-            
-            let newArea = fromAmount.value
-        
+       input8.addEventListener("click",rubtogbp)
+ function rubtogbp() {
+             let newArea = fromAmount.value
             fetch(`https://api.exchangerate.host/latest?base=RUB&symbols=GBP`)
             .then(res => res.json())
-            .then(data => {toAmount.value = ((newArea*data.rates['GBP']))})
-            
-             
+            .then(data => {toAmount.value = ((newArea*data.rates['GBP']))})     
          }
 
          input5.addEventListener("click",rubtorub)
-
-         function rubtorub() {
-            
-             
-            let newArea = fromAmount.value
-        
-            fetch(`https://api.exchangerate.host/latest?base=RUB&symbols=RUB`)
+        function rubtorub() {
+             let newArea = fromAmount.value
+         fetch(`https://api.exchangerate.host/latest?base=RUB&symbols=RUB`)
             .then(res => res.json())
             .then(data => {toAmount.value = ((newArea*data.rates['RUB']))})
-            
-             
-         }
-                
-           
+             }  
         }
 
 ///////////////////sag////////////////////
