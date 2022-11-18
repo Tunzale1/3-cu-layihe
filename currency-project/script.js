@@ -27,7 +27,10 @@ function newData2 () {
         .then(res => res.json())
         .then(data => {toAmount.value = ((newArea*data.rates['USD']).toFixed(3))})
       //   result.innerHTML = `1 USD = 1USD`  
-         
+          .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
      }
      input7.addEventListener("click",usdtoeur)
 
@@ -38,7 +41,10 @@ function newData2 () {
         fetch(`https://api.exchangerate.host/latest?base=USD&symbols=EUR`)
         .then(res => res.json())
         .then(data => {toAmount.value = ((newArea*data.rates['EUR']).toFixed(3))})
-        
+         .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
       // result.innerHTML= `1 USD = 0.964559 EUR`  
      }
 
@@ -51,7 +57,10 @@ function newData2 () {
         fetch(`https://api.exchangerate.host/latest?base=USD&symbols=GBP`)
         .then(res => res.json())
         .then(data => {toAmount.value = ((newArea*data.rates['GBP']).toFixed(3))})
-        
+         .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
          
      }
 
@@ -65,7 +74,10 @@ function newData2 () {
         fetch(`https://api.exchangerate.host/latest?base=USD&symbols=RUB`)
         .then(res => res.json())
         .then(data => {toAmount.value = ((newArea*data.rates['RUB']).toFixed(3))})
-        
+         .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
          
      }
             
@@ -87,7 +99,10 @@ function newData3 () {
         fetch(`https://api.exchangerate.host/latest?base=EUR&symbols=USD`)
         .then(res => res.json())
         .then(data => {toAmount.value = ((newArea*data.rates['USD']).toFixed(3))})
-        
+         .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
          
      }
      input7.addEventListener("click",eurtoeur)
@@ -100,7 +115,10 @@ function newData3 () {
         .then(res => res.json())
         .then(data => {toAmount.value = ((newArea*data.rates['EUR']).toFixed(3))})
         
-         
+          .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
      }
 
      input8.addEventListener("click",eurtogbp)
@@ -113,7 +131,10 @@ function newData3 () {
         .then(res => res.json())
         .then(data => {toAmount.value = ((newArea*data.rates['GBP']).toFixed(3))})
         
-         
+        .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            })   
      }
 
      input5.addEventListener("click",eurtorub)
@@ -127,7 +148,10 @@ function newData3 () {
         .then(res => res.json())
         .then(data => {toAmount.value = ((newArea*data.rates['RUB']).toFixed(3))})
         
-         
+          .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
      }
             
        
@@ -154,7 +178,10 @@ toAmount.addEventListener('keyup',newData)
             .then(res => res.json())
             .then(data => {toAmount.value = ((newArea*data.rates['USD']).toFixed(3))})
             
-             
+              .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
          }
          input7.addEventListener("click",rubtoeur)
 
@@ -166,7 +193,10 @@ toAmount.addEventListener('keyup',newData)
             .then(res => res.json())
             .then(data => {toAmount.value = ((newArea*data.rates['EUR']).toFixed(3))})
             
-             
+              .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
          }
 
          input8.addEventListener("click",rubtogbp)
@@ -179,7 +209,10 @@ toAmount.addEventListener('keyup',newData)
             .then(res => res.json())
             .then(data => {toAmount.value = ((newArea*data.rates['GBP']).toFixed(3))})
             
-             
+             .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            })  
          }
 
          input5.addEventListener("click",rubtorub)
@@ -193,7 +226,10 @@ toAmount.addEventListener('keyup',newData)
             .then(res => res.json())
             .then(data => {toAmount.value = ((newArea*data.rates['RUB']).toFixed(3))})
             
-             
+             .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            })  
          }
                 
            
@@ -217,7 +253,10 @@ toAmount.addEventListener('keyup',newData4)
             .then(res => res.json())
             .then(data => {toAmount.value = ((newArea*data.rates['USD']).toFixed(3))})
             
-             
+              .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
          }
          input7.addEventListener("click",gbptoeur)
 
@@ -229,7 +268,10 @@ toAmount.addEventListener('keyup',newData4)
             .then(res => res.json())
             .then(data => {toAmount.value = ((newArea*data.rates['EUR']).toFixed(3))})
             
-             
+              .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
          }
 
          input8.addEventListener("click",gbptogbp)
@@ -242,7 +284,10 @@ toAmount.addEventListener('keyup',newData4)
             .then(res => res.json())
             .then(data => {toAmount.value = ((newArea*data.rates['GBP']).toFixed(3))})
             
-             
+              .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
          }
 
          input5.addEventListener("click",gbptorub)
@@ -256,75 +301,92 @@ toAmount.addEventListener('keyup',newData4)
             .then(res => res.json())
             .then(data => {toAmount.value = ((newArea*data.rates['RUB']).toFixed(3))})
             
-             
+              .catch(error=>{
+               alert("Internet baglantini yoxla")
+               console.log("interneti check ele")
+            }) 
          }
                 
            
         }
 
 
-// // rubldan cevirmey/////////////////////////////////
+input1.addEventListener('click', (event) => {
+            event.target.style.backgroundColor = '#833AE0';
+        input3.style.backgroundColor="#E5E5E5"
+        input4.style.backgroundColor="#E5E5E5"
+        input5.style.backgroundColor="#E5E5E5"
+        input6.style.backgroundColor="#E5E5E5"
+        input7.style.backgroundColor="#E5E5E5"
+        input2.style.backgroundColor="#E5E5E5"
+        input8.style.backgroundColor="#E5E5E5"
+        });
+        input2.addEventListener('click', (event) => {
+            event.target.style.backgroundColor = '#833AE0';
+            input3.style.backgroundColor="#E5E5E5"
+        input4.style.backgroundColor="#E5E5E5"
+        input5.style.backgroundColor="#E5E5E5"
+        input6.style.backgroundColor="#E5E5E5"
+        input7.style.backgroundColor="#E5E5E5"
+        input1.style.backgroundColor="#E5E5E5"
+        input8.style.backgroundColor="#E5E5E5"
+        });input3.addEventListener('click', (event) => {
+            event.target.style.backgroundColor = '#833AE0';
+            input2.style.backgroundColor="#E5E5E5"
+            input4.style.backgroundColor="#E5E5E5"
+            input5.style.backgroundColor="#E5E5E5"
+            input6.style.backgroundColor="#E5E5E5"
+            input7.style.backgroundColor="#E5E5E5"
+            input1.style.backgroundColor="#E5E5E5"
+            input8.style.backgroundColor="#E5E5E5"
+        });input4.addEventListener('click', (event) => {
+            event.target.style.backgroundColor = '#833AE0';
+            input2.style.backgroundColor="#E5E5E5"
+            input3.style.backgroundColor="#E5E5E5"
+            input5.style.backgroundColor="#E5E5E5"
+            input6.style.backgroundColor="#E5E5E5"
+            input7.style.backgroundColor="#E5E5E5"
+            input1.style.backgroundColor="#E5E5E5"
+            input8.style.backgroundColor="#E5E5E5"
+        });input5.addEventListener('click', (event) => {
+            event.target.style.backgroundColor = '#833AE0';
+            input2.style.backgroundColor="#E5E5E5"
+            input3.style.backgroundColor="#E5E5E5"
+            input4.style.backgroundColor="#E5E5E5"
+            input6.style.backgroundColor="#E5E5E5"
+            input7.style.backgroundColor="#E5E5E5"
+            input1.style.backgroundColor="#E5E5E5"
+            input8.style.backgroundColor="#E5E5E5"
+        });input6.addEventListener('click', (event) => {
+            event.target.style.backgroundColor = '#833AE0';
+            input2.style.backgroundColor="#E5E5E5"
+            input3.style.backgroundColor="#E5E5E5"
+            input5.style.backgroundColor="#E5E5E5"
+            input4.style.backgroundColor="#E5E5E5"
+            input7.style.backgroundColor="#E5E5E5"
+            input1.style.backgroundColor="#E5E5E5"
+            input8.style.backgroundColor="#E5E5E5"
+        });input7.addEventListener('click', (event) => {
+            event.target.style.backgroundColor = '#833AE0';
+            input2.style.backgroundColor="#E5E5E5"
+            input3.style.backgroundColor="#E5E5E5"
+            input5.style.backgroundColor="#E5E5E5"
+            input6.style.backgroundColor="#E5E5E5"
+            input4.style.backgroundColor="#E5E5E5"
+            input1.style.backgroundColor="#E5E5E5"
+            input8.style.backgroundColor="#E5E5E5"
+        });input8.addEventListener('click', (event) => {
+            event.target.style.backgroundColor = '#833AE0';
+            input2.style.backgroundColor="#E5E5E5"
+            input3.style.backgroundColor="#E5E5E5"
+            input5.style.backgroundColor="#E5E5E5"
+            input6.style.backgroundColor="#E5E5E5"
+            input7.style.backgroundColor="#E5E5E5"
+            input1.style.backgroundColor="#E5E5E5"
+            input4.style.backgroundColor="#E5E5E5"
+        })
 
-// input1.addEventListener("click",newData1)
-// fromAmount.addEventListener('click',newData1)
-// toAmount.addEventListener('click',newData1)
 
-
-//     function newData1 () {
-        
-//         input6.addEventListener("click",rubtousd)
-//          function rubtousd() {
-           
-//             let newArea = fromAmount.value
-        
-//             fetch(`https://api.exchangerate.host/latest?base=RUB&symbols=USD`)
-//             .then(res => res.json())
-//             .then(data => {toAmount.value = ((newArea*0.016567))})
-            
-             
-//          }
-//          input7.addEventListener("click",rubtoeur)
-
-//          function rubtoeur() {
-            
-//             let newArea = fromAmount.value
-        
-//             fetch(`https://api.exchangerate.host/latest?base=RUB&symbols=EUR`)
-//             .then(res => res.json())
-//             .then(data => {toAmount.value = ((newArea*data.rates['EUR']))})
-            
-             
-//          }
-
-//          input8.addEventListener("click",rubtogbp)
-
-//          function rubtogbp() {
-            
-//             let newArea = fromAmount.value
-        
-//             fetch(`https://api.exchangerate.host/latest?base=RUB&symbols=GBP`)
-//             .then(res => res.json())
-//             .then(data => {toAmount.value = ((newArea*data.rates['GBP']))})
-            
-             
-//          }
-
-//          input5.addEventListener("click",rubtorub)
-
-//          function rubtorub() {
-            
-             
-//             let newArea = fromAmount.value
-        
-//             fetch(`https://api.exchangerate.host/latest?base=RUB&symbols=RUB`)
-//             .then(res => res.json())
-//             .then(data => {toAmount.value = ((newArea*1))})
-            
-             
-//          }
-                
-           
-//         }
 
 // ///////////////////sag////////////////////
 // input5.addEventListener("click",newData5)
@@ -758,78 +820,5 @@ toAmount.addEventListener('keyup',newData4)
 //          } 
 //         }
         
-        input1.addEventListener('click', (event) => {
-            event.target.style.backgroundColor = '#833AE0';
-        input3.style.backgroundColor="#E5E5E5"
-        input4.style.backgroundColor="#E5E5E5"
-        input5.style.backgroundColor="#E5E5E5"
-        input6.style.backgroundColor="#E5E5E5"
-        input7.style.backgroundColor="#E5E5E5"
-        input2.style.backgroundColor="#E5E5E5"
-        input8.style.backgroundColor="#E5E5E5"
-        });
-        input2.addEventListener('click', (event) => {
-            event.target.style.backgroundColor = '#833AE0';
-            input3.style.backgroundColor="#E5E5E5"
-        input4.style.backgroundColor="#E5E5E5"
-        input5.style.backgroundColor="#E5E5E5"
-        input6.style.backgroundColor="#E5E5E5"
-        input7.style.backgroundColor="#E5E5E5"
-        input1.style.backgroundColor="#E5E5E5"
-        input8.style.backgroundColor="#E5E5E5"
-        });input3.addEventListener('click', (event) => {
-            event.target.style.backgroundColor = '#833AE0';
-            input2.style.backgroundColor="#E5E5E5"
-            input4.style.backgroundColor="#E5E5E5"
-            input5.style.backgroundColor="#E5E5E5"
-            input6.style.backgroundColor="#E5E5E5"
-            input7.style.backgroundColor="#E5E5E5"
-            input1.style.backgroundColor="#E5E5E5"
-            input8.style.backgroundColor="#E5E5E5"
-        });input4.addEventListener('click', (event) => {
-            event.target.style.backgroundColor = '#833AE0';
-            input2.style.backgroundColor="#E5E5E5"
-            input3.style.backgroundColor="#E5E5E5"
-            input5.style.backgroundColor="#E5E5E5"
-            input6.style.backgroundColor="#E5E5E5"
-            input7.style.backgroundColor="#E5E5E5"
-            input1.style.backgroundColor="#E5E5E5"
-            input8.style.backgroundColor="#E5E5E5"
-        });input5.addEventListener('click', (event) => {
-            event.target.style.backgroundColor = '#833AE0';
-            input2.style.backgroundColor="#E5E5E5"
-            input3.style.backgroundColor="#E5E5E5"
-            input4.style.backgroundColor="#E5E5E5"
-            input6.style.backgroundColor="#E5E5E5"
-            input7.style.backgroundColor="#E5E5E5"
-            input1.style.backgroundColor="#E5E5E5"
-            input8.style.backgroundColor="#E5E5E5"
-        });input6.addEventListener('click', (event) => {
-            event.target.style.backgroundColor = '#833AE0';
-            input2.style.backgroundColor="#E5E5E5"
-            input3.style.backgroundColor="#E5E5E5"
-            input5.style.backgroundColor="#E5E5E5"
-            input4.style.backgroundColor="#E5E5E5"
-            input7.style.backgroundColor="#E5E5E5"
-            input1.style.backgroundColor="#E5E5E5"
-            input8.style.backgroundColor="#E5E5E5"
-        });input7.addEventListener('click', (event) => {
-            event.target.style.backgroundColor = '#833AE0';
-            input2.style.backgroundColor="#E5E5E5"
-            input3.style.backgroundColor="#E5E5E5"
-            input5.style.backgroundColor="#E5E5E5"
-            input6.style.backgroundColor="#E5E5E5"
-            input4.style.backgroundColor="#E5E5E5"
-            input1.style.backgroundColor="#E5E5E5"
-            input8.style.backgroundColor="#E5E5E5"
-        });input8.addEventListener('click', (event) => {
-            event.target.style.backgroundColor = '#833AE0';
-            input2.style.backgroundColor="#E5E5E5"
-            input3.style.backgroundColor="#E5E5E5"
-            input5.style.backgroundColor="#E5E5E5"
-            input6.style.backgroundColor="#E5E5E5"
-            input7.style.backgroundColor="#E5E5E5"
-            input1.style.backgroundColor="#E5E5E5"
-            input4.style.backgroundColor="#E5E5E5"
-        })
+        
 
