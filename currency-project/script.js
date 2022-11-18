@@ -16,6 +16,8 @@ const result = document.getElementById("result");
 input2.addEventListener("click",newData2)
 fromAmount.addEventListener('keyup',newData2)
 toAmount.addEventListener('keyup',newData2)
+ 
+alert("ilk once valyuta daha sonra mebleg daxil edin, her defe deyisdikde valyutani secin")
 
 function newData2 () {
     
